@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telemed App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/telemedicon.png" />
+
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+      <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar-menu">
+        <h3> <img src="images/telemed.png" width="230" height="80"></h3>
+        <nav class="flex-grow-1 d-flex flex-column">
+          <a href="#">Početna stranica</a>
+        <a href="new_record.html" class="link-primary">Novi zapis</a>
+        <a href="records.html">Svi zapisi</a>
+        <a href="new_patient.html">Novi pacijent</a>
+        <a href="patients.html">Pacijenti</a>
+        <a href="patient.html">Pacijent</a>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h2 class="mt-4">Novi zapis</h2> <br>
+        <div class="row">
+            <div class="col-6">
+                <form>
+                    <div class="form-group pt-2">
+                        <div>   
+                            <label for="tlak1">Sistolički tlak</label><br>
+                            <input class="form-control mb-3 js-st" type="number" id="tlak1" placeholder="Unesite samo broj npr. 128">
+                        </div>
+                        <div>
+                            <label for="tlak2">Dijastolički tlak</label><br>
+                            <input class="form-control mb-3 js-dt" type="number" id="tlak2" placeholder="Unesite samo broj npr. 86">
+                        </div>
+                        <div>
+                          <label for="puls">Puls</label><br>
+                          <input class="form-control mb-3 js-puls" type="number" id="puls" placeholder="Unesite samo broj npr. 70">
+                        </div>
+                        <div>
+                          <label for="opis">Opis satanja</label><br>
+                          <textarea class="form-control mb-3 js-opis" style="height: 90px;" type="text" id="opis" placeholder="Opišite kako se osjećate.."></textarea>
+                        </div>
+                        <div>
+                            <label for="date">Datum i vrijeme</label><br>
+                            <input class="form-control mb-3 js-vrijeme" type="datetime-local" id="date"> <br>
+                        </div>
+                        <button class="btn btn-primary" name="toTable" type="button" onclick="addTodoToTable()">Send</button>
+                        <button class="btn btn-primary btn-danger" name="reset" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center">
+                <img src="images/blood-pressure.jpg" class="img img-fluid shadow" style="width: auto; max-height: 550px;">
+            </div>
+        </div>
+      </div>
+    </div>
+  <script src="scripts/new_record.js"></script>
+  </body>
+</html>
+
