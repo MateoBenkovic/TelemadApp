@@ -1,7 +1,7 @@
 import { formatDatetime } from './formatTime.js';
 
 const records = JSON.parse(localStorage.getItem('records')) || [];
-
+/*
 renderRecords();
 
 function renderRecords() {
@@ -34,6 +34,11 @@ document.querySelectorAll('.js-delete-button').forEach((deleteButton, index) => 
     localStorage.setItem('records', JSON.stringify(records));
   });
 });
+*/
+function toggleMenu() {
+  const sidebar = document.getElementById('sidebar-menu');
+  sidebar.classList.toggle('active');
+}
 
 
 

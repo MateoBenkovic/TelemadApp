@@ -18,12 +18,9 @@
     <div class="sidebar" id="sidebar-menu">
       <h3> <img src="images/telemed.png" width="230" height="80"></h3>
       <nav class="flex-grow-1 d-flex flex-column">
-        <a href="#">Početna stranica</a>
-        <a href="new_record.html">Novi zapis</a>
-        <a href="records.html">Svi zapisi</a>
-        <a href="new_patient.html" class="link-primary">Novi pacijent</a>
-        <a href="patients.html">Pacijenti</a>
-        <a href="patient.html">Pacijent</a>
+        <button class="btn btn-danger mt-3" onclick="location.href = 'patients.html'">
+          Natrag
+        </button>
       </nav>
 
     </div>
@@ -50,9 +47,19 @@
                 <input class="form-control mb-3 js-prezime" type="text" id="prezime"
                   placeholder="Unesite prezime pacijenta">
               </div>
-              <div>
-                <label for="datum_rodjenja">Datum rodjenja</label><br>
-                <input class="form-control mb-3 js-datum-rodjenja" type="date" id="date">
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label for="datum_rodjenja">Datum rodjenja</label><br>
+                  <input class="form-control mb-3 js-datum-rodjenja" type="date" id="date">
+                </div>
+                <div class="col-md-8">
+                  <p>Spol</p>
+                  <input class="mb-3 js-spol" type="radio" id="male" name="spol" value="male">
+                  <label for="male">Muško</label>
+                  <input class="mb-3 js-spol" type="radio" id="female" name="spol" value="female">
+                  <label for="male">Žensko</label>
+                  
+                </div>
               </div>
               <div>
                 <label for="adresa">Adresa stanovanja</label><br>
@@ -91,7 +98,7 @@
                 placeholder="Lozinka za prijavu u aplikaciju">
             </div>
             <button class="btn btn-primary" type="button" onclick="addUser()">Dodaj</button>
-            <button class="btn btn-primary btn-danger" name="reset" type="reset">Reset</button>
+            <button class="btn btn-primary btn-danger" name="reset" type="reset">Obriši</button>
             </form>
           </div>
 

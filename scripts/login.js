@@ -3,7 +3,7 @@ function login()  {
   const password = document.querySelector('.js-password').value; 
 
   if (username == "username" && password == "password") {
-    window.location.href = "new_record.html";
+    window.location.href = "records.html";
   } else {
     alert("Wrong username or password!");
   }

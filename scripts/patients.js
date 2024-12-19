@@ -1,5 +1,5 @@
 const patients = JSON.parse(localStorage.getItem('patients')) || [];
-
+/*
 renderPatients();
 
 function renderPatients() {
@@ -22,7 +22,7 @@ function renderPatients() {
 
 }
 
-
+*/
 
 
 

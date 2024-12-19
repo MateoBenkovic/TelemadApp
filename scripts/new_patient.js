@@ -12,8 +12,9 @@ function addUser() {
   const email = document.querySelector('.js-email').value;
   const username = document.querySelector('.js-username').value;
   const lozinka = document.querySelector('.js-lozinka').value;
+  const spol = document.querySelector('input[name="spol"]:checked').value;
 
-  patients.push({ mb: mb, ime: ime, prezime: prezime, datumRodjenja: datumRodjenja, adresa: adresa, pb: pb, grad: grad, kontakt: kontakt, email: email, username: username, lozinka: lozinka });
+  patients.push({ mb: mb, ime: ime, prezime: prezime, datumRodjenja: datumRodjenja, adresa: adresa, pb: pb, grad: grad, kontakt: kontakt, email: email, username: username, lozinka: lozinka, spol: spol });
   localStorage.setItem('patients', JSON.stringify(patients));
   console.log(patients);
   window.location.href = 'patients.html';

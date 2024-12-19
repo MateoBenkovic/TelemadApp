@@ -18,12 +18,13 @@
     <div class="sidebar" id="sidebar-menu">
       <h3> <img src="images/telemed.png" width="230" height="80"></h3>
       <nav class="flex-grow-1 d-flex flex-column">
-        <a href="#">Početna stranica</a>
-        <a href="new_record.html">Novi zapis</a>
         <a href="records.html" class="link-primary">Svi zapisi</a>
-        <a href="new_patient.html">Novi pacijent</a>
-        <a href="patients.html">Pacijenti</a>
-        <a href="patient.html">Pacijent</a>
+        <a href="patients.html">Lista pacijenata</a>
+        <div class="mt-auto">
+          <h4 class="pb-3 link-primary">Ivo Ivić</h4>
+          <a href="login.html" class="mt-auto">Odjava</a>
+        </div>
+        
       </nav>
 
     </div>
@@ -32,23 +33,31 @@
     <div class="main-content">
       <h2 class="mt-4">Svi zapisi</h2> <br>
       <div class="row mb-3">
-        <div class="col">
-          <label for="from-date">Od datuma:</label>
-          <input type="date" class="form-control" id="from-date">
-        </div>
-        <div class="col">
-          <label for="to-date">Do datuma:</label>
-          <input type="date" class="form-control" id="to-date">
-        </div>
-        <div class="col">
-          <label for="sort">Sortiraj po:</label>
-          <select class="form-control" id="sort">
-            <option>Datum</option>
-            <option>Sistolički tlak</option>
-            <option>Dijastolički tlak</option>
-          </select>
+        <div class="col d-flex justify-content-between align-items-end">
+          <!-- Left-aligned section -->
+          <div class="d-flex">
+            <div class="me-3">
+              <label for="from-date">Od datuma:</label>
+              <input type="date" class="form-control" id="from-date">
+            </div>
+            <div class="me-3">
+              <label for="to-date">Do datuma:</label>
+              <input type="date" class="form-control" id="to-date">
+            </div>
+            <div>
+              <label for="sort">Sortiraj po:</label>
+              <select class="form-control" id="sort">
+                <option>Sistolički tlak</option>
+                <option>Dijastolički tlak</option>
+              </select>
+            </div>
+          </div>
+      
+          <!-- Right-aligned button -->
+          <button class="btn btn-warning" onclick="location.href = 'new_record.html'">Novi zapis</button>
         </div>
       </div>
+      
 
       <!-- Table -->
       <div class="table-container">
@@ -65,12 +74,54 @@
             </tr>
           </thead>
           <tbody class="js-records">
+            <tr>
+              <td>19.12.2024. 18:45</td>
+              <td>120</td>
+              <td>80</td>
+              <td>70</td>
+              <td>Osjecam se dobro</td>
+              <td><button class="btn btn-light js-delete-button"><img src="images/delete.png" width="24" height="24"></button> </td>
+              <td><button class="btn btn-light js-edit-button"><img src="images/edit.png" width="24" height="24"></button> </td>
+            </tr>
+            <tr>
+              <td>19.12.2024. 18:45</td>
+              <td>120</td>
+              <td>80</td>
+              <td>70</td>
+              <td>Osjecam se dobro</td>
+              <td><button class="btn btn-light js-delete-button"><img src="images/delete.png" width="24" height="24"></button> </td>
+              <td><button class="btn btn-light js-edit-button"><img src="images/edit.png" width="24" height="24"></button> </td>
+            </tr>
+            <tr>
+              <td>19.12.2024. 18:45</td>
+              <td>120</td>
+              <td>80</td>
+              <td>70</td>
+              <td>Osjecam se dobro</td>
+              <td><button class="btn btn-light js-delete-button"><img src="images/delete.png" width="24" height="24"></button> </td>
+              <td><button class="btn btn-light js-edit-button"><img src="images/edit.png" width="24" height="24"></button> </td>
+            </tr>
+            <tr>
+              <td>19.12.2024. 18:45</td>
+              <td>120</td>
+              <td>80</td>
+              <td>70</td>
+              <td>Osjecam se dobro</td>
+              <td><button class="btn btn-light js-delete-button"><img src="images/delete.png" width="24" height="24"></button> </td>
+              <td><button class="btn btn-light js-edit-button"><img src="images/edit.png" width="24" height="24"></button> </td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
   <script type="module" src="scripts/records.js"></script>
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar-menu');
+      sidebar.classList.toggle('active');
+    }
+  </script>
 </body>
 
 </html>

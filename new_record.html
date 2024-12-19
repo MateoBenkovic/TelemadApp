@@ -19,12 +19,10 @@
       <div class="sidebar" id="sidebar-menu">
         <h3> <img src="images/telemed.png" width="230" height="80"></h3>
         <nav class="flex-grow-1 d-flex flex-column">
-          <a href="#">Početna stranica</a>
-        <a href="new_record.html" class="link-primary">Novi zapis</a>
-        <a href="records.html">Svi zapisi</a>
-        <a href="new_patient.html">Novi pacijent</a>
-        <a href="patients.html">Pacijenti</a>
-        <a href="patient.html">Pacijent</a>
+        <button class="btn btn-danger mt-3" onclick="location.href = 'records.html'">
+          Natrag
+        </button>
+        
         </nav>
       </div>
 
@@ -55,8 +53,8 @@
                             <label for="date">Datum i vrijeme</label><br>
                             <input class="form-control mb-3 js-vrijeme" type="datetime-local" id="date"> <br>
                         </div>
-                        <button class="btn btn-primary" name="toTable" type="button" onclick="addTodoToTable()">Send</button>
-                        <button class="btn btn-primary btn-danger" name="reset" type="reset">Reset</button>
+                        <button class="btn btn-primary" name="toTable" type="button" onclick="addTodoToTable()">Pošalji</button>
+                        <button class="btn btn-primary btn-danger" name="reset" type="reset">Obriši</button>
                     </div>
                 </form>
             </div>

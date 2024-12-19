@@ -18,15 +18,9 @@
     <div class="sidebar" id="sidebar-menu">
       <h3> <img src="images/telemed.png" width="230" height="80"></h3>
       <nav class="flex-grow-1 d-flex flex-column">
-        <a href="#">Početna stranica</a>
-        <a href="new_record.html">Novi zapis</a>
-        <a href="records.html">Svi zapisi</a>
-        <a href="new_patient.html">Novi pacijent</a>
-        <a href="patients.html">Pacijenti</a>
-        <a href="patient.html" class="link-primary">Pacijent</a>
-        
-
-        <a href="login.html" class="mt-auto">Odjava</a>
+        <button class="btn btn-danger mt-3" onclick="location.href = 'patients.html'"> 
+          Natrag
+        </button>
       </nav>
 
     </div>
@@ -35,6 +29,17 @@
     <div class="main-content">
       <div class="container mt-4">
         <div class="row justify-content-between align-items-center js-patient-data">
+          <div class="col-md-8">
+            <h2>Ivo Ivić</h2>
+      </div>
+      <div class="col-md-4 text-end">
+        <p class="mb-1">MB: 123456789</p>
+        <p class="mb-1">Stjepana i Antuna Radića, 44000 Sisak</p>
+        <p class="mb-1">73 godine</p>
+        <p class="mb-1">09123456789</p>
+        <p class="mb-1">ivo-ivic@gmail.com</p>
+        <button class="btn btn-secondary btn-sm">Uredi podatke</button>
+      </div>
         </div>
       </div>
 
@@ -51,6 +56,37 @@
             </tr>
           </thead>
           <tbody class="js-patients">
+            <tr>
+              <td>19.12.2024 18:45</td>
+              <td>120/80</td>
+              <td>70</td>
+              <td>Osjećam se dobro za razliku od jučer kada mi nije bilo dobro.</td>
+            </tr>
+            <tr>
+              <td>19.12.2024 18:45</td>
+              <td>120/80</td>
+              <td>70</td>
+              <td>Osjećam se dobro za razliku od jučer kada mi nije bilo dobro.</td>
+            </tr>
+            <tr>
+              <td>19.12.2024 18:45</td>
+              <td>120/80</td>
+              <td>70</td>
+              <td>Osjećam se dobro za razliku od jučer kada mi nije bilo dobro.</td>
+            </tr>
+            <tr>
+              <td>19.12.2024 18:45</td>
+              <td>120/80</td>
+              <td>70</td>
+              <td>Osjećam se dobro za razliku od jučer kada mi nije bilo dobro.</td>
+            </tr>
+            <tr>
+              <td>19.12.2024 18:45</td>
+              <td>120/80</td>
+              <td>70</td>
+              <td>Osjećam se dobro za razliku od jučer kada mi nije bilo dobro.</td>
+            </tr>
+            
           </tbody>
         </table>
       </div>
